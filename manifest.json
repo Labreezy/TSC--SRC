@@ -12,6 +12,11 @@
             "matches": ["*://www.soniccenter.org/members/*/sonic_the_hedgehog/times/*/*"],
             "all_frames": true,
             "js": ["dataGrabber.js"]
+        },
+        {
+            "matches": ["*://www.speedrun.com/sonic06/editrun/level/*"],
+            "all_frames": true,
+            "js": ["dataPopulator.js"]
         }
     ],
     "page_action": {
