@@ -1,16 +1,32 @@
-let url = document.getElementById('url');
+let dataDiv = document.getElementById('dataPreview');
+let bigButton = document.getElementById('bigButton');
+let dataButton = document.getElementById('dataButton');
 
-chrome.storage.sync.get('entry', (data) => {
-    // changeColor.style.backgroundColor = data.color;
-    // changeColor.setAttribute('value', data.color);
-    // changeColor.setAttribute('onClick', function(e) {
-    //     console.log(e.target.value);
-    //     let color = e.target.value;
-    //     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    //         chrome.tabs.executeScript(
-    //             tabs[0].id,
-    //             {code: 'document.body.style.backgroundColor = "' + color + '"; console.log("Pressed button");'}
-    //         )
-    //     })
-    // })
+let getData = (func) => {
+    chrome.storage.local.get('tscData', (data) => {
+        data = JSON.parse(data.tscData);
+        //console.log(data)
+        func(data);
+    })
+};
+bigButton.addEventListener('click', () => {
+    getData((data) => {
+        console.log("this is the part where we auto-populate data :)")
+        //console.log(data);
+        console.log(document.children)
+    });
 })
+
+dataButton.addEventListener('click', () => {
+    getData((data) => {
+        dataDiv.childNodes.forEach(node => removeChild(node))
+        //console.log(data);
+        if(data) {
+            for(dataPoint in data) {
+                let dataPointElement = document.createElement('div');
+                dataPointElement.innerText = `${dataPoint}: ${data[dataPoint]}`;
+                dataDiv.appendChild(dataPointElement);
+            }
+        }
+    })
+});
