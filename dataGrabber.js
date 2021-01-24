@@ -16,7 +16,10 @@ let nameConversion = {
     ['AC-Tygo']: "Yeeves",
     ['Shadow Jacky']: "ShadowJacky",
     Zip: "ZipTSC",
-    ['The Kid . 130']: "The_Kid"
+    ['The Kid . 130']: "The_Kid",
+    Ourolen: "Ouro",
+    Wikedawsom: "Wike",
+    ['Irregular Zero']: "IrregularZero"
 }
 console.log(nameConversion);
 let entries = document.getElementsByClassName("innerdata")[0];
