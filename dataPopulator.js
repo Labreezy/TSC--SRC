@@ -26,8 +26,7 @@ chrome.storage.local.get(['tscData'], (data) => {
     tscData.difficulty === 'Very Hard' ?
         difficulty.value = 165264 : console.log("No difficulty found");
     autoVerify.checked = true;
-    let reformattedDate = `20${tscData.date.substring(tscData.date.length - 2)}-${tscData.date.substring(0, 2)}-${tscData.date.substring(tscData.date.indexOf("-") + 1, tscData.date.indexOf("-") + 3)}`;
-    date.value = reformattedDate;
+    date.value = tscData.date;
     platform.value = 23;
     //console.log(reformattedDate);
     //console.log(platform)
