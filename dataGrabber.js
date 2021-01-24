@@ -35,6 +35,7 @@ Array.from(entries.children[0].children).forEach((element, key) => {
     // The second item in the row is TSC runner name
     let nameElement = Array.from(element.children)[1];
     let heading = document.getElementById('heading').innerText;
+    data.storyName = heading.includes('Sonic') ? 'Sonic' : heading.includes('Silver') ? 'Silver' : heading.includes('Shadow') ? 'Shadow' : heading.includes('Extra') ? 'Extra' : 'unknown';
     data.difficulty = heading.includes('Very Hard') ? 'Very Hard' : heading.includes('Hard') ? 'Hard' : 'Normal';
     data.time = comment.innerText;
     data.comment = comment.title + " [Time Taken (with permission) from https://www.soniccenter.org/ ]";
