@@ -1,6 +1,6 @@
 console.log("now utilizing wike's fabulous semi-automatic data collector");
 let nameConversion = {
-    Psyborg: "PsyborgTSC",
+    PsyBorg: "PsyborgTSC",
     nick1373: "Nick867",
     ['JeraCyclo Daniel']: "VolcanoTheBat",
     Parax: "Aruki",
