@@ -1,5 +1,5 @@
 ## Hi, welcome to my first attempt at making a chrome extension. 
-This tool is designed to help the moderators of Sonic 06 speedrunning on speedrun.com to port the vast amount of IL times that exist on thesoniccenter.org to SRC IL leaderboards.
+This tool is designed to help the moderators of Sonic 06 speedrunning on speedrun.com to port the vast amount of IL times that exist on soniccenter.org to SRC IL leaderboards.
 
 ### Usage:
  - Open an IL leaderboard on TSC
