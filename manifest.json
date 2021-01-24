@@ -2,11 +2,7 @@
     "name": "TSC -> SRC",
     "version" : "1.0",
     "description": "Convert TSC entries to SRC",
-    "permissions": ["storage", "declarativeContent", "activeTab"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": true
-    },
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": ["*://www.soniccenter.org/rankings/sonic_the_hedgehog/times/*/*"],
