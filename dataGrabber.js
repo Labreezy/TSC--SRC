@@ -1,4 +1,4 @@
-console.log("now utilizing wike's fabulous semi-automatic data collector");
+console.log("now utilizing wike and lab's fabulous semi-automatic data collector");
 let nameConversion = {
     Psyborg: "PsyborgTSC",
     nick1373: "Nick867",
@@ -18,9 +18,9 @@ let nameConversion = {
     Zip: "ZipTSC",
     ['The Kid . 130']: "The_Kid",
     Ourolen: "Ouro",
-    Wikedawsom: "Wike",
+    Wikedawsom: "Wike", 
     ['Irregular Zero']: "IrregularZero"
-}
+};
 console.log(nameConversion);
 let entries = document.getElementsByClassName("innerdata")[0];
 //console.log(entries)
@@ -35,8 +35,9 @@ Array.from(entries.children[0].children).forEach((element, key) => {
     // The second item in the row is TSC runner name
     let nameElement = Array.from(element.children)[1];
     let heading = document.getElementById('heading').innerText;
-    data.storyName = heading.includes('Sonic') ? 'Sonic' : heading.includes('Silver') ? 'Silver' : heading.includes('Shadow') ? 'Shadow' : heading.includes('Extra') ? 'Extra' : 'unknown';
-    data.difficulty = heading.includes('Very Hard') ? 'Very Hard' : heading.includes('Hard') ? 'Hard' : 'Normal';
+    let splitheading = heading.split(" ");
+    data.level = splitheading[0] + splitheading[1];
+    data.zone = "Zone " + splitheading[2].substring(0,1);
     data.time = comment.innerText;
     data.comment = comment.title + " [Time Taken (with permission) from https://www.soniccenter.org/ ]";
 

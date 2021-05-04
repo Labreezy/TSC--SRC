@@ -5,12 +5,12 @@
     "permissions": ["storage"],
     "content_scripts": [
         {
-            "matches": ["*://www.soniccenter.org/rankings/sonic_the_hedgehog/times/*/*"],
+            "matches": ["*://www.soniccenter.org/rankings/sonic_lost_world/times/*/*"],
             "all_frames": true,
             "js": ["dataGrabber.js"]
         },
         {
-            "matches": ["*://www.speedrun.com/sonic06/editrun/level/*"],
+            "matches": ["*://www.speedrun.com/slw/editrun/level/*"],
             "all_frames": true,
             "js": ["dataPopulator.js"]
         }
