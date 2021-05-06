@@ -14,6 +14,7 @@ let platform = Array.from(document.getElementsByTagName('SELECT')).filter((eleme
 let level = Array.from(document.getElementsByTagName('SELECT')).filter((element) => element.name === 'level')[0];
 let levels = ["WindyHill", "DesertRuins", "TropicalCoast", "FrozenFactory", "SilentForest", "SkyRoad", "LavaMountain"];
 let base_var = 140229;
+let catgegory = document.getElementById('category');
 // Read the data that is currently saved in tscData and set the value
 // of the related input field for each because that's definitely the best way to do that mmmmmmhhhhmmmmmm
 chrome.storage.local.get(['tscData'], (data) => {
@@ -27,7 +28,7 @@ chrome.storage.local.get(['tscData'], (data) => {
     timeMinute.value = splittime[0];
     timeSecond.value = splittime[1];
     
-    timeMillisecond.value = splittime[2];
+    timeMillisecond.value = parseInt(splittime[2])*10;
     
     autoVerify.checked = true; // Checks the box that says verify now instead of submitting for review
     date.value = tscData.date; // Date should already be formatted correctly at this point
@@ -44,7 +45,7 @@ chrome.storage.local.get(['tscData'], (data) => {
     } else {
         console.log("zoned out :)");
     }
-    
+    category.value = "Zone_" + tscData.zone;
 });
 
 // Since SRC sees difficulty as a different variable and values for each story,

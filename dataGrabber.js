@@ -19,7 +19,9 @@ let nameConversion = {
     ['The Kid . 130']: "The_Kid",
     Ourolen: "Ouro",
     Wikedawsom: "Wike", 
-    ['Irregular Zero']: "IrregularZero"
+    ['Irregular Zero']: "IrregularZero",
+    frokenok3: 'Frokenok',
+    CoEmpathy: 'Lexi'
 };
 console.log(nameConversion);
 let entries = document.getElementsByClassName("innerdata")[0];
@@ -37,7 +39,7 @@ Array.from(entries.children[0].children).forEach((element, key) => {
     let heading = document.getElementById('heading').innerText;
     let splitheading = heading.split(" ");
     data.level = splitheading[0] + splitheading[1];
-    data.zone = "Zone " + splitheading[2].substring(0,1);
+    data.zone = splitheading[2].substring(0,1).replace(" ","_");
     data.time = comment.innerText;
     data.comment = comment.title + " [Time Taken (with permission) from https://www.soniccenter.org/ ]";
 

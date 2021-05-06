@@ -5,7 +5,7 @@
     "permissions": ["storage"],
     "content_scripts": [
         {
-            "matches": ["*://www.soniccenter.org/rankings/sonic_lost_world/times/*/*"],
+            "matches": ["*://www.soniccenter.org/rankings/sonic_lost_world/times/*"],
             "all_frames": true,
             "js": ["dataGrabber.js"]
         },
